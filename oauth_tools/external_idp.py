@@ -148,7 +148,8 @@ class DexIdpService(ExternalIdpService):
 
         logger.info("Restarting dex")
         self._restart_dex()
-
+        import time
+        time.sleep(30)
         logger.info("Waiting for dex to be ready")
         self._wait_until_is_ready()
 
